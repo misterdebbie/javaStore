@@ -23,4 +23,10 @@ public Buyer(Department dept, PurchaseOrder pOrder){
   //return copy of purchase object
   return new PurchaseOrder(purchase);
  }
+ public String toString(){
+   String str = "\nDepartment Info:\n" + department + "\nPurchase Order Info:\n" +
+   purchase;
+   return str;
+ }
+
  }
