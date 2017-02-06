@@ -1,6 +1,6 @@
 //Buyer class definition
 //extends Employee class
-public class Buyer{
+public class Buyer extends Employee{
 //declare instance fields
 private Department department;
 private PurchaseOrder purchase;
