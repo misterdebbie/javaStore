@@ -9,19 +9,19 @@ public class Store {
 //declare fields
 //total employees
 String eName, eId;
-double eWage, totalHours;
+double eWage, totalHours, totalWages;
 int totalEmployees;
 //create Scanner object
 Scanner keyboard = new Scanner (System.in);
-System.out.print("Enter total employees ");
+System.out.print("Enter total employees: ");
 totalEmployees = keyboard.nextInt();
 //create employee objects array
 Employee[] employees = new Employee [totalEmployees];
 for (int index = 0; index < employees.length; index++){
-  System.out.println("Employee " + (index+1)+ ": ");
+  System.out.println("Employee " + (index+1));
   System.out.print("Enter name: ");
-  eName = keyboard.nextLine();
   keyboard.nextLine();
+  eName = keyboard.nextLine();
   System.out.print("Enter id: ");
   eId = keyboard.nextLine();
   System.out.print("Enter wage: ");
@@ -40,7 +40,8 @@ for (int index = 0; index < employees.length; index++){
   System.out.println("Employee name: " + employees[index].getName());
   System.out.println("Employee id: " + employees[index].getId());
   System.out.println("Employee wage: " + employees[index].getWage());
-  System.out.println("Employee total wages: " + employees[index].getTotalWages());
+  totalWages = employees[index].getTotalWages();
+  System.out.println("Employee total wages: $" + totalWages);
 
 }//close for loop
 

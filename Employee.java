@@ -5,6 +5,8 @@ public class Employee{
  private String name;
  private String id;
  private double wage;
+ private double hours;
+
 
  //@param name the employee's name
  public void setName(String name){
@@ -18,6 +20,10 @@ public class Employee{
    public void setWage(double wage){
    this.wage = wage;
    }
+   //@param hours the employee's wage
+    public void setHours(double hours){
+    this.hours = hours;
+    }
    public String getName(){
    return this.name;
    }
@@ -26,5 +32,8 @@ public class Employee{
    }
    public double getWage(){
    return this.wage;
+   }
+   public double getTotalWages(){
+   return this.wage * this.hours;
    }
 }
